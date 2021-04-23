@@ -144,6 +144,10 @@ font-size: 16px;
 .stats-heading{
     max-width: 500px;
     margin: auto;
+    position: relative;
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%, 10%);
     
 
 
@@ -205,5 +209,92 @@ font-size: 16px;
 
 .footer .social a{
     margin:0 10px;
+
+}
+
+/* TABLETS AND UNDER */
+
+@media (max-width:768px){
+
+.container{
+    padding:  0 2.5rem;
+}
+
+.grid, .showcase .grid, .stats .grid, .cli .grid, .cloud .grid{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.showcase{
+    height:auto;
+
+}
+.showcase-text{
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.showcase-form{
+    justify-self: center;
+    margin: auto;
+}
+
+.cli .grid > *:first-child{
+    grid-column: 1 ;
+    grid-row: 1;
+}
+
+
+
+}
+
+@media(max-width:1200px){
+    .container{
+        padding: 3rem;
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+    .container{
+        padding:  0 2.5rem;
+    }
+    .navbar{
+        height:110px;
+
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+
+    }
+}
+
+@media(max-width:425px){
+
+    .showcase-form{
+        position: relative;
+        top: 60px;
+        height: 250px;
+        width:300px;
+        padding: 40px;
+        z-index: 100;
+        justify-self: flex-end;
+    
+    }
+    .showcase .btn{
+        position: relative;
+       
+        top: -12px;
+        padding: 5px 15px;
+    }
     
 }
